@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #0f172a; /* Deep Navy Dark Mode */
+  color: #f8fafc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  
+  /* Standard property for compatibility */
+  background-clip: text; 
+  
+  /* Vendor prefix for Safari and older Chrome versions */
+  -webkit-background-clip: text; 
+  
+  /* This hides the actual text color so the gradient shows through */
+  -webkit-text-fill-color: transparent; 
+  color: transparent; /* Fallback for browsers not supporting -webkit-text-fill-color */
+}
+
+/* Grid Layout */
+.coin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Card Design */
+.coin-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.coin-card:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
   align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card-header img {
+  width: 32px;
+  height: 32px;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Price Badges */
+.change-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.up {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+.down {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+/* Loading Spinner */
+.loader {
+  height: 100vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-size: 1.5rem;
+  color: #38bdf8;
+}
+
+.title-container{
+  display: flex;
+  justify-content: space-between;
+}
+.search-container {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 14px 20px;
+  border-radius: 12px;
   color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-input:focus {
+  border-color: #38bdf8;
 }
