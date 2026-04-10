@@ -1,4 +1,6 @@
 # 🚀 Crypto Live Tracker (TypeScript + Redux Toolkit)
+**[🔗 View Live Demo](https://69d93c7158701535a62aadc4--cryptos-track.netlify.app/)** 
+
 
 A professional, real-time cryptocurrency dashboard built with **React**, **TypeScript**, and **Redux Toolkit**. This project fetches live market data from the CoinGecko API and provides a clean, responsive interface for tracking price changes.
 
@@ -50,5 +52,5 @@ A professional, real-time cryptocurrency dashboard built with **React**, **TypeS
 * `src/components`: Reusable UI components.
 * `src/types`: TypeScript interfaces and definitions.
 
-## 🤝 Contact
-**Rakesh** [LinkedIn Profile Link] | [Your Email Address]
+## 🤝 Connect
+**[LinkedIn](https://www.linkedin.com/in/rakeshrocky8/)**
